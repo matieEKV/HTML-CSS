@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackYourFuture-WaveRiders</title>
+    <!-- StyleSheet-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font family -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navdiv">
+    <div>
+        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwTGVl4yqwg240a7sKv37ql4apv3gilWpMHN54TmvrvsAv3tTRk8XHYKn1Kp3wyCe3Exo&usqp=CAU" alt="drawn blue wave with a surf board on top" />
+    </div>
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+      </div>
+  </div>
+</nav>
+  <section class="titleContainer">
+   <div class="headers">
+     <h1>WaveRiders squirrel surf school</h1>
+     <p class="subheading">Ride the waves with WaveRiders!<p>
+     <button class="bookButton" onclick="openPopup()">Book your lesson</button>
+    </div>
+     <!-- adding overlay element to dim the background when popup active -->
+    <div id="overlay" onclick="closePopup()"></div>
+
+    <!-- popup container for downloading cards -->
+     <section class="popupContainer" id="popup">
+        <div class="popup">
+             <div>
+                <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwTGVl4yqwg240a7sKv37ql4apv3gilWpMHN54TmvrvsAv3tTRk8XHYKn1Kp3wyCe3Exo&usqp=CAU" alt="drawn blue wave with a surf board on top" />
+            </div>
+            <h2 class="popupHeadline">Yaaay for wanting to join our <i>WaveRiders</i> team!</h2>
+        </div>
+        <section class="infoForm">
+        <form method="post">
+            <div class="info">
+                <label for="squirrelName">Your full name: </label>
+                <input class="infoInput" type="text" name="squirrelName" id="squirrelName" required />
+            </div>
+            <div class="info">
+                <label for="email">Your email address: </label>
+                <input class="infoInput" type="email" name="email" id="email" placeholder="squirrel@nuts.com" required />
+            </div>
+            <div class="info">
+                <label for="phone"> Your phone number: </label>
+                <input class="infoInput" type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="82 45 32 43" required />
+            </div>
+            <section class="preferred">
+            <fieldset class="radio-group">
+                <legend>Preferred Contact Method</legend>
+                <label for="prefEmail">
+                    <input class="radio" type="radio" id="prefEmail" name="preferred" value="email" selected> 
+                Email</label>
+                <label for="prefWap"></label>
+                    <input class= "radio" type="radio" id="prefWap" name="preferred" value="wApp">
+                    What's App</label>
+                <label for="prefTel"></label>
+                    <input class= "radio" type="radio" id="prefTel" name="preferred" value="tel">
+                Phone</label>
+            </fieldset>
+            </div>
+        </section>
+    </section>
+        </form>
+        <div class="popupButtons">
+            <button class ="buttonPopup" id="cancelButton" onClick="closePopup()">CANCEL</button>
+            <button class ="buttonPopup" id="bookBtn" onClick="openPopup(), closePopup()">BOOK</button>
+        </div>
+    </section>
+</section>
+<!-- modal thank you -->
+<div id="modal-container">
+    <div id="modal">
+        <h2>THANK YOU!</h2>
+        <img id="icon" src="https://i.pinimg.com/736x/7c/d9/df/7cd9df044768f72e1cba7097463fda8c.jpg" alt="squirrel standing next to a small table with an open tiny laptop">
+        <p>One of our Wave Riders will contact you soon!</p>
+        <div id="close-btn">CLOSE</div>
+    </div>
+</div>
+  <section class="bluediv">
+    <div class="squirrelImage">
+     <img class="squirrelsurf" id="squirrel1" src="https://thumbs.dreamstime.com/b/cartoon-style-cute-squirrel-surfing-huge-wave-ai-generated-picture-301352798.jpg" alt="Squirrel riding a big wave on a small green surf board with blue sky behind"/>
+     </div>
+     <div class="squirrelImage">
+     <img class="squirrelsurf" id="squirrel2" src="https://as1.ftcdn.net/jpg/08/41/17/62/1000_F_841176274_DZzSkOLKn16aOH4AKOdiC5YYIa1rtptO.jpg" alt="Squirrel riding a calm wave on a small oragne surf board on a clear sunny day"/>
+    </div>
+    </section>
+    <section class="headline">
+        <div class="descriptionHeadline">
+            <p class="subheading">Why choose WaveRiders</p>
+            <p class="subheading2">At Waverider, we are passionate about helping you ride the waves with confidence and joy.</p>
+        </div>
+    </section>
+        <section class="description">
+            
+            <div class="cards">
+                <div class="infoSign"> ⓘ</div>
+               <div class="card">
+                <p class="scriptHeadline"><strong>Certified bushy tailed instructors</strong></p>
+                <p class="script">Our nutty instructors are fully certified in squirrel surf safety and bring a tree-load of experience to every lesson. They are not just acorn-catching pros on the waves
+    -they are also friendly, patient, and know how to make even the shyest squirrel feel at ease. You will feel right at home whether you are a curious kit or a seasoned tree-hopper.</p>
+                </div>
+    </div>
+   
+        <div class="cards">
+             <div class="infoSign"> ⓘ</div>
+           <div class="card">
+                <p class="scriptHeadline"><strong>Tiny class sizes for top-notch nut-struction</strong></p>
+                <p class="script">We keep our classes small - just a pawful of squirrels at a time - so every student gets plenty of 
+        one-on-one attention. This way, your instructor can focus on your unique skilles and help you scurry up the learning curve faster than you can say wave-nut.</p>
+            </div>
+        </div>
+        
+        <div class="cards">
+            <div class="infoSign"> ⓘ</div>
+            <div class="card">
+                <p class="scriptHeadline"><strong>Flexible lesson times - solo or with your scurry</strong></p>
+                <p class="script">Whether you are an early riser a sunset shredder, we've got flexible lesson times to match your tree-hopping schedule. Join a group class for some tail-slapping 
+                fun with fellow-wave riders or go for a private lesson if you prefer a quieter beach and full focus on your form.</p>
+             </div>
+        </div>
+    </section>
+    <section class="bluediv" id="blueDivCustomer">
+       <div class="descriptionHeadline" id="customerHeadline">
+            <p class="subheading">What other squirrels say</p>
+            <p class="subheading2">We have tons of customers that enjoyed their time with us!</p>
+        </div>
+        <div class="customersContainer">
+            <div class="customer">
+                <p class="experience">"Absolutely loved it!"</p>
+                <div class="authorContainer">
+                <img class="squirrelCustomer" src="https://www.wildlifeonline.me.uk/assets/ugc/images/red_squirrel_face-on.jpg" alt="squirrel on a branch looking at the camera"/>
+                <p class="author">Walnut Willie<br>35, Botanist</p>
+                </div>
+            </div>
+            <div class="customer">
+                <p class="experience">"Great time!"</p>
+                 <div class="authorContainer">
+                <img class="squirrelCustomer" src="https://t3.ftcdn.net/jpg/16/83/98/40/360_F_1683984012_2oxod162coaYPuDJY2UTABUaNbqDHuRz.jpg" alt="Squirrel sitting on leaves with bushy tail behind"/>
+                <p class="author">Hazelnut Hanne<br>27, Industrial climber</p>
+                </div>
+            </div>
+            <div class="customer">
+                <p class="experience">"What a blast!"</p>
+                 <div class="authorContainer">
+                <img class="squirrelCustomer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEz6xe4ZEeaggpWLKYp4_FprSpicsgY2CMgBh5lLgY5UifkNe11RBpANsU1MXeBOOhldw&usqp=CAU" alt="Squirrel standing close to the camera lens "/>
+                <p class="author">Peanut Patty<br>24, Delivery rider</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwTGVl4yqwg240a7sKv37ql4apv3gilWpMHN54TmvrvsAv3tTRk8XHYKn1Kp3wyCe3Exo&usqp=CAU" alt="drawn blue wave with a surf board on top" />
+            <div class="signs"><a href="#">𝕏</a><a href="#"> ⓕ</a><a href="#">  ▶ </a><a href="#"> [in]</a></div>
+        </div>
+        <div class="footer-links">
+            <p><a href="#"><strong>About</strong></a></p>
+        </div>
+        <div class="footer-links">
+            <p><a href="#"><strong>Courses</strong></p>
+            <p id="links"><a href="#">Group<br>Private Classes<br>FAQ</a></p>
+        </div>
+         <div class="footer-links">
+            <p><a href="#"><strong>Shop</strong></a></p>
+            <p id="links"><a href="#">Surfboards<br>Wetsuits</a></p>
+        </div>
+        <div class="location">
+            <img class="map" src="https://i.redd.it/l1ppq1227xeb1.jpg" alt="image of Little Tokyo from google maps" />
+        </div>
+    </footer>
+    <script src="script.js"></script>
+ </body>
+</html>
+
