@@ -1,0 +1,76 @@
+:root {
+  --text-color: #3e1313;
+  --main-border: 2px solid var(--text-color);
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e0cddc;
+  color: var(--text-color);
+}
+
+p {
+  width: 60%;
+  line-height: 1.6;
+  text-align: justify;
+  border: var(--main-border);
+  padding: 1.5rem;
+  border-radius: 25px;
+}
+
+section {
+  margin: 1rem;
+  max-width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h4 {
+  margin: 0;
+}
+
+.skills-group,
+.interests-group {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--main-border);
+  border-radius: 25px;
+}
+
+/* remove the default margins and padding to center the lists */
+.skills-group ul,
+.interests-group ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.skills-group ul li,
+.interests-group ul li {
+  margin-bottom: 0.2rem;
+}
+
+button {
+  background-color: transparent;
+  border: var(--main-border);
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+@media (min-width: 750px) and (min-height: 550px) {
+  section {
+    width: 60%;
+  }
+}
