@@ -1,0 +1,179 @@
+:root {
+  --primary-color: purple;
+  --secondary-color: rgb(183, 231, 174);
+  --main-border: 2px solid var(--primary-color);
+}
+
+body {
+  background-color: rgb(241, 206, 241);
+  padding: 1rem 15rem 1rem 15rem;
+}
+
+body,
+main,
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+}
+
+.logo {
+  max-width: 8rem;
+  max-height: 8rem;
+  margin: 0 3rem;
+  animation-duration: 3s;
+  animation-name: spin;
+  border: var(--main-border);
+}
+
+@keyframes spin {
+  0% {
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 50%;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.header-p {
+  border-top: var(--main-border);
+  padding-top: 0.5rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+.description,
+header {
+  border-bottom: var(--main-border);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+img {
+  width: 75%;
+  height: 65vh;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.recent {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent li {
+  display: list-item; /*removed the bullet points because of the reset*/
+  cursor: pointer;
+}
+
+.recent li a:hover {
+  color: var(--primary-color);
+}
+
+.recent img {
+  width: 70vw;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.recent h3 {
+  font-weight: 700;
+}
+
+.recent li,
+.recent h3 {
+  color: black;
+}
+
+.recent li a,
+.recent li::marker {
+  /* changing the bullet points style */
+  color: black;
+  text-decoration: none;
+}
+
+@media (min-width: 950px) and (min-height: 550px) {
+  .recent img {
+    all: initial; /*reset the styles of all mentioned*/
+  }
+
+  .recent {
+    position: relative;
+    padding: 2rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .recent img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    z-index: 0;
+  }
+
+  .recent li,
+  .recent h3 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .recent li {
+    margin-right: 5rem;
+  }
+
+  .recent h3 {
+    margin-right: 7rem;
+    color: white;
+  }
+
+  .recent li a,
+  .recent li::marker {
+    /* changing the bullet points style */
+    color: var(--secondary-color);
+  }
+
+  .recent li a:hover {
+    color: green;
+  }
+
+  .recent li a:focus {
+    border: var(--main-border);
+  }
+}
+
+.bio {
+  text-align: center;
+  border: var(--main-border);
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: rgb(62, 11, 62);
+}
+
+footer {
+  color: rgb(184, 178, 178);
+  font-size: 0.8rem;
+}
