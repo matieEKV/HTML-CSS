@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Movies</title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+        <h1>My Favorite Movies</h1>
+    </header>
+    <nav>
+        <a href="#home">HOME</a>
+        <div class="sort">
+            
+            <div class="dropdown">
+                <button class="dropdownButton">Sort Movies</button>
+                <div class="dropdown-content">
+                    <button class="ascending">Year Ascending</button>
+                    <button class="descending">Year Descending</button>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownButton">Filter by Genre</button>
+                <div class="dropdown-content">
+                    <button class="sci-fi">Sci-fi</button>
+                    <button class="drama">Drama</button>
+                    <button class="drama">Romance</button>
+                    <button class="drama">Action</button>
+                    <button class="drama">Horror</button>
+                </div> 
+            </div>
+        </div>
+    </nav>
+    <section class="movie-list">
+         <!-- <div class="movie">
+                 <img class="ui-image" />
+                 <div class="movie-info"> 
+                         <section class="legend">
+                            <p class="tag"><strong>Name: </strong></p>
+                            <p class="tag"><strong>Genre: </strong></p>
+                            <p class="tag"><strong>Released: </strong></p>
+                            <p class="tag"><strong>Directed by: </strong></p>
+                            <p class="tag"><strong>Description: </strong></p>
+                        </section> 
+                        
+                         <section class="movie-descr">
+                            <p class="ui-name"> bla bla bla</p>
+                            <p class="ui-genre"></p>
+                            <p class="ui-year"></p>
+                             <p class="ui-director"></p>
+                             <p class="ui-description"></p>
+                        </section>
+                </div>
+        </div>  -->
+    </section>
+    <!-- <button class="show">Show</button> -->
+    <button class="button" id="openForm">Add New Movie</button>
+    <div id="overlay"></div>
+    
+    <section class="popupContainer">
+        <!-- <div class="popup"> -->
+            <div class="form">
+                <div class="row">
+                    <label for="movie-name">Movie Name</label>
+                    <input id="movie-name" name="movie-name" />
+                </div>
+                <div class="row">
+                    <label for="movie-genre">Movie Genre</label>
+                    <input id="movie-genre" name="movie-genre" />
+                </div>
+                <div class="row">
+                    <label for="release-year">Release Year</label>
+                    <input type="number" id="release-year" name="release-year" />
+                </div>
+                <div class="row">
+                    <label for="director-name">Director Name</label>
+                    <input id="director-name" name="director-name" />
+                </div>
+                <div class="row">
+                    <label for="movie-image">Add image URL</label>
+                    <input id="movie-image" name="movie-image" />
+                </div>
+                <label for="description">Add a short Description</label>
+                <textarea type="text" id="description" rows="5"></textarea> <br>
+                <div class="buttonContainer">
+                    <button class="popupButtons" id="cancel">Cancel</button>
+                    <button class="popupButtons" id ="addMovie">Add Movie</button>
+                </div>
+            </div>
+        <!-- </div> -->
+    </section>
+    <!-- <div class="search">
+        <label for="movie-search">Search for Movie</label>
+        <input id="movie-search" type="text">
+    </div> -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
